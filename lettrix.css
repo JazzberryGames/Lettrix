@@ -1,0 +1,121 @@
+/* NOTE: webkit covers chrome, opera, and safari */
+body {
+  /* radial gradient*/
+  /* webkit */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,210,0.25) 0%,rgba(215,215,180,1) 130%);
+  /* firefox */
+  background: -moz-radial-gradient(center,ellipse cover, rgba(0,0,0,0.75),rgba(0,0,0,1) 130%);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#top-banner {
+  /* position relative so that children can be positioned absolutely */
+  position: relative;
+  height:120px;
+
+  /* linear gradient */
+  /* webkit */
+  background: -webkit-linear-gradient(top, rgba(39,255,93,1) 0%,rgba(0,166,42,1) 120%); /* Chrome10+,Safari5.1+ */  
+  /* firefox */
+  background: -moz-linear-gradient(top,rgba(39,255,93,1),rgba(0,166,42,1));
+
+  /* box-shadow */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.80);
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.80); 
+  /* firefox */
+  -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.80);
+
+  /* rounded corners */
+  border-radius: 15px;
+}
+#top-image {
+  /* centered using html */
+  height:120px;
+  /* width is set automatically by setting the height */
+}
+#title {
+  /* parent (top-banner) position: relative */
+  /* position: absolute makes the position relative to parent element (given the parent element's position is relative) */
+  position: absolute;
+  /* (30,30) offset */
+  top: 30px;
+  left: 30px;
+  /* explicit font size */
+  font-size: 40px;
+  /* font style */
+  font-family: "Century Gothic", verdana, helvetica, sans-serif;  
+  color: rgba(255, 245, 230, 1.0);
+  /* shadow & glow */
+  text-shadow: -1px -1px #00A62A, 0 0 15px #FFFFFF;
+}
+#health-bar {
+  /* box-shadow */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.50); 
+  /* firefox */
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
+
+  /* rounded corners */
+  border-radius: 10px;
+
+  /* text glow */
+  text-shadow: 0 0 15px #DDDDDD;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#game-container {
+  /* explicit height and width */
+  height:500;
+  width :500;
+  /* black box */
+  background-color:rgba(20,186,62,1);
+  /* box-shadow */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.80);
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.80);
+  /* firefox */
+  -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.80);
+  /* rounded corners */
+  border-radius: 10px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#score {
+  /* font style */
+  font-family: "lucida grande", sans-serif;  
+  color: rgba(150, 150, 150, 1.0);
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 0 1px 5px #777777;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#overlay {
+  background-color: #000;
+  opacity: .7;
+  filter: alpha(opacity=80);
+  position: fixed; top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 10;
+}
+
+#gameOver {
+  font-size: 50px;
+  font-family: "lucida grande", sans-serif;  
+  color: #FFFFFF;
+  text-align: center;
+  position: fixed; top: 0; left: 0;
+  width: 100%; height: 100%;
+  letter-spacing: 2px;
+  padding: 150px 0 0 0;
+  z-index: 99;
+  /* text glow */
+  text-shadow: 0 0 15px #DDDDDD;
+}

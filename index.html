@@ -1,0 +1,35 @@
+<html>
+<head>
+<script type='text/javascript' src='./h4x.js'></script>
+<script type='text/javascript' src='./WordList.js'></script>
+<script type='text/javascript' src='./Word.js'></script>
+<script type='text/javascript' src='./Dictionary.js'></script>
+<script type='text/javascript' src='./Environment.js'></script>
+<script type='text/javascript' src='./LetterPicker.js'></script>
+<script type='text/javascript'>
+function load() {
+ var e = new Environment(); 
+ e.printSelfToDiv(document.getElementById('game-container'));
+}
+</script>
+</head>
+
+<link rel='stylesheet' type='text/css' href='./lettrix.css'/>
+<body onload='load()'>
+<div id='top-banner'>
+<div id='title'>Lettrix</div>
+<center>
+</center>
+</div>
+<div id='main'>
+<center id='center'>
+<div id='health-bar'></div>
+<div id='game-container' width='500px' height='500px'>
+</div>
+<div id='score'>
+000000
+</div>
+</center>
+</div>
+</body>
+</html>
